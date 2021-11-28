@@ -1,0 +1,365 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background-color: #eef1f5;
+}
+
+:root {
+  --chudao: #2b3643;
+  --chudaohover: #3a485a;
+}
+
+.wraper {
+  width: 100%;
+  height: 100%;
+}
+.wraper_center {
+  max-width: 1536px;
+  height: calc(100vh - 80px);
+  margin: auto;
+  position: relative;
+  box-shadow: 0px 0px 15px var(--chudaohover);
+}
+.wraper_center_header {
+  width: 1536px;
+  height: 80px;
+  background-color: var(--chudao);
+  position: fixed;
+  transition: all 0.4s;
+  top: 0;
+  border-bottom: 1px solid var(--chudaohover);
+  box-shadow: 0px 0px 15px var(--chudaohover);
+  padding: 0px 20px;
+}
+.wraper_center_header-left {
+  width: 250px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wraper_center_header-left .logo_web {
+  color: cyan;
+  font-size: 32px;
+  font-weight: 600;
+  background-color: var(--chudao);
+  letter-spacing: 1px;
+}
+.wraper_center_main {
+  width: 100%;
+  height: auto;
+  display: flex;
+  margin-top: 80px;
+  background-color: #eef1f5;
+}
+.wraper_center_main_left {
+  width: 270px;
+  height: 100%;
+  left: 0;
+  background-color: var(--chudao);
+  position: fixed;
+  transition: left 0.4s ease;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.4s ease;
+}
+.wraper_center_main_left .sidebar .account {
+  height: 120px;
+  display: flex;
+  padding-left: 10px;
+}
+.wraper_center_main_left .sidebar .account .logo_account {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wraper_center_main_left .sidebar .account .logo_account img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid cyan;
+}
+.wraper_center_main_left .sidebar .account .lable_account {
+  width: 50%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+}
+.wraper_center_main_left .sidebar .account .lable_account p {
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+.wraper_center_main_left .sidebar .account .lable_account p:first-child {
+  font-size: 14px;
+}
+.wraper_center_main_left .sidebar .account .btn {
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  background: var(--chudao);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: left 0.4s ease;
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.wraper_center_main_left .sidebar .account .btn span {
+  color: cyan;
+  font-size: 28px;
+  line-height: 45px;
+}
+.wraper_center_main_left .sidebar ul {
+  background-color: var(--chudao);
+  height: 100%;
+  width: 100%;
+  list-style: none;
+}
+.wraper_center_main_left .sidebar ul li {
+  line-height: 50px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.wraper_center_main_left .sidebar ul li:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.wraper_center_main_left .sidebar ul li a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding-left: 30px;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  border-left: 4px solid transparent;
+}
+.wraper_center_main_left .sidebar ul li.active a {
+  color: cyan;
+  background-color: var(--chudao);
+  border-left-color: cyan;
+}
+.wraper_center_main_left .sidebar ul li a:hover {
+  background-color: var(--chudaohover);
+  color: cyan;
+}
+.wraper_center_main_left .sidebar ul ul {
+  position: static;
+  display: none;
+}
+.wraper_center_main_left .sidebar ul .feat-show.show {
+  display: block;
+}
+.wraper_center_main_left .sidebar ul .serv-show.show1 {
+  display: block;
+}
+.wraper_center_main_left .sidebar ul ul li {
+  line-height: 42px;
+  border-top: none;
+}
+.wraper_center_main_left .sidebar ul ul li a {
+  font-size: 15px;
+  color: #e6e6e6;
+  padding-left: 50px;
+}
+.wraper_center_main_left .sidebar ul li.active ul li a {
+  color: #e6e6e6;
+  background: var(--chudao);
+  border-left-color: transparent;
+}
+.wraper_center_main_left .sidebar ul ul li a:hover {
+  color: cyan !important;
+  background: var(--chudaohover) !important;
+}
+.wraper_center_main_left .sidebar ul li a span {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 22px;
+  transition: transform 0.4s;
+}
+.wraper_center_main_left .sidebar ul li a span.rotate {
+  transform: translateY(-50%) rotate(-180deg);
+}
+.wraper_center_main_left.show {
+  left: -270px;
+}
+.wraper_center_main_right {
+  width: calc(100% - 270px);
+  height: 100%;
+  background-color: white;
+  margin-left: 270px;
+  transition: all 0.4s ease;
+}
+.wraper_center_main_right-path {
+  width: 1266px;
+  height: 50px;
+  position: fixed;
+  background-color: white;
+  box-shadow: -1px -1px 10px -5px var(--chudaohover);
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  transition: all 0.4s ease;
+}
+.wraper_center_main_right-path .btn {
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  background: white;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: left 0.4s ease;
+}
+.wraper_center_main_right-path .btn.click {
+  left: 15px;
+}
+.wraper_center_main_right-path .btn span {
+  color: var(--chudao);
+  font-size: 28px;
+  line-height: 45px;
+}
+.wraper_center_main_right-main {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  margin-top: 50px;
+}
+.wraper_center_main_right-main--center {
+  width: 100%;
+  height: calc(100vh - 220px);
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 0 10px var(--chudao);
+}
+.wraper_center_main_right.click {
+  left: 0;
+  width: 100%;
+  transition: all 0.4s ease;
+  margin-left: 0px;
+}
+.wraper_center_main_right.click .wraper_center_main_right-path {
+  width: 1536px;
+}
+.wraper_center_footer {
+  width: 100%;
+  height: 50px;
+  background-color: var(--chudao);
+  border-top: 1px solid var(--chudaohover);
+}
+
+@media screen and (max-width: 768px) {
+  .wraper_center_main_right {
+    width: 100%;
+    margin-left: 0px;
+  }
+  .wraper_center_main_right.click {
+    left: 0;
+    width: 100%;
+    transition: all 0.4s ease;
+    margin-left: 0;
+  }
+
+  .wraper_center_header-left {
+    width: 100%;
+  }
+
+  .wraper_center_main_right-main {
+    padding: 0;
+  }
+  .wraper_center_main_right-main--center {
+    border-radius: 0;
+    height: calc(100vh - 180px);
+  }
+}
+@media screen and (min-width: 1537px) {
+  .wraper_center_main_right-path .btn {
+    display: none;
+  }
+
+  .wraper_center_main_left {
+    left: inherit;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .wraper_center_main_right-path,
+.wraper_center_header {
+    width: 100%;
+    right: inherit;
+  }
+
+  .wraper_center_main_left {
+    left: -270px;
+  }
+  .wraper_center_main_left.show {
+    left: 0;
+  }
+
+  .wraper_center_main_right {
+    width: 100%;
+    margin-left: 0px;
+  }
+  .wraper_center_main_right.click {
+    left: 0;
+    width: 100%;
+    transition: all 0.4s ease;
+  }
+  .wraper_center_main_right.click .wraper_center_main_right-path {
+    margin-left: 270px;
+  }
+}
+@media screen and (max-width: 376px) {
+  .wraper_center_main_left.show {
+    width: 100%;
+  }
+
+  .wraper_center_main_right .wraper_center_main_right-path {
+    height: 40px;
+  }
+  .wraper_center_main_right .wraper_center_main_right-path span {
+    line-height: 40px;
+  }
+  .wraper_center_main_right .wraper_center_main_right-path.click {
+    width: 50px;
+    right: inherit;
+    transition: all 0.4s ease;
+    margin-left: 100%;
+  }
+  .wraper_center_main_right .wraper_center_main_right-path.click .btn {
+    transition: all 0.4s ease;
+    display: none;
+    background-color: var(--chudao);
+  }
+  .wraper_center_main_right .wraper_center_main_right-path.click .btn.click span:before {
+    content: "\f00d";
+  }
+  .wraper_center_main_right .wraper_center_main_right-path.click .btn span {
+    color: cyan;
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  .wraper_center_main_left .sidebar .account .btn {
+    display: block;
+    transition: all 0.4s ease;
+  }
+
+  .wraper_center_main_right-main {
+    margin-top: 40px;
+  }
+  .wraper_center_main_right-main--center {
+    height: calc(100vh - 170px);
+  }
+}
+
+/*# sourceMappingURL=app.css.map */
